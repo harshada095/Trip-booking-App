@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <!-- Main Image -->
+    <ImageView
+        android:id="@+id/placeImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/bg" />
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <!-- Place Name -->
+    <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Place Name"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/placeImage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Rating Icon -->
+    <ImageView
+        android:id="@+id/ratingStar"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/placeName"
+        app:srcCompat="@drawable/star" />
+
+    <!-- Rating Value -->
+    <TextView
+        android:id="@+id/ratingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/rubik"
+        android:text="4.5"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingStar"
+        app:layout_constraintEnd_toStartOf="@+id/ratingStar"
+        app:layout_constraintTop_toTopOf="@+id/ratingStar" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Available flight:"
+        android:textColor="#044363"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/placeName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/placeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="--"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/dateText"
+        app:layout_constraintTop_toTopOf="@id/dateText"
+        app:layout_constraintBottom_toBottomOf="@id/dateText" />
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/priceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Price range:"
+        android:textColor="#044363"
+        app:layout_constraintTop_toBottomOf="@id/dateText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/placePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="--"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/priceLabel"
+        app:layout_constraintTop_toTopOf="@id/priceLabel"
+        app:layout_constraintBottom_toBottomOf="@id/priceLabel" />
+
+    <!-- Photo Gallery Label -->
+    <TextView
+        android:id="@+id/photoGalleryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Photo Gallery"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintTop_toBottomOf="@id/priceLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Gallery Images -->
+    <ImageView
+        android:id="@+id/galleryImage1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/photoGalleryLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/img1" />
+
+    <ImageView
+        android:id="@+id/galleryImage2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/galleryImage1"
+        app:layout_constraintStart_toEndOf="@id/galleryImage1"
+        tools:src="@drawable/img2" />
+
+    <ImageView
+        android:id="@+id/galleryImage3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/galleryImage2"
+        app:layout_constraintStart_toEndOf="@id/galleryImage2"
+        tools:src="@drawable/img3" />
+
+    <!-- Like Icon -->
+    <ImageView
+        android:id="@+id/likeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/like" />
+
+    <!-- Booking Button -->
+    <Button
+        android:id="@+id/bookButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/book_button_bg"
+        android:text="Start Booking Your Trip"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintStart_toEndOf="@id/likeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/likeButton"
+        app:layout_constraintBottom_toBottomOf="@id/likeButton" />
+
+    <!-- About Label -->
+    <TextView
+        android:id="@+id/aboutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="About"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintTop_toBottomOf="@id/galleryImage1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/placeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="--"
+        app:layout_constraintTop_toBottomOf="@id/aboutLabel"
+        app:layout_constraintStart_toStartOf="@id/aboutLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bookButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
